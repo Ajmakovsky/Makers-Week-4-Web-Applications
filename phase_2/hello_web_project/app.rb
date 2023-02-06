@@ -8,15 +8,20 @@ class Application < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  # get '/names' do 
+
+  #   name1 = params[:name1]
+  #   name2 = params[:name2]
+  #   name3 = params[:name3]
+
+
+  #   return "#{name1}, #{name2}, #{name3}"
+  # end
+
   get '/names' do 
-
-    name1 = params[:name1]
-    name2 = params[:name2]
-    name3 = params[:name3]
-
-
-    return "#{name1}, #{name2}, #{name3}"
-  end
+    names = params[:names]
+    return names
+  end 
 
   post '/sort-names' do 
 
