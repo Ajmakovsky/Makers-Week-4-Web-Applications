@@ -10,9 +10,9 @@ describe Application do
   let(:app) { Application.new }
 
   context "GET /" do
+
     it 'returns Julia, Mary, Karim' do
-      # Assuming the post with id 1 exists.
-      response = get('/names?name1=Julia&name2=Mary&name3=Karim')
+      response = get('/names?names=Julia, Mary, Karim')
 
       expect(response.status).to eq(200)
       expect(response.body).to eq "Julia, Mary, Karim"
