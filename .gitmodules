@@ -1,0 +1,3 @@
+[submodule "web-applications"]
+	path = web-applications
+	url = https://github.com/Ajmakovsky/Makers-Week-4-Web-Applications.git
