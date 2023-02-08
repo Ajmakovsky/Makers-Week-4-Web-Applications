@@ -8,15 +8,15 @@ class Application < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  # get '/names' do 
+  get '/hello' do 
+    return erb(:index)
+  end 
 
-  #   name1 = params[:name1]
-  #   name2 = params[:name2]
-  #   name3 = params[:name3]
-
-
-  #   return "#{name1}, #{name2}, #{name3}"
-  # end
+  post '/submit' do 
+    name = params[:name]
+    message = params[:message]
+    return "Thanks #{name}, you sent this message: #{message}"
+  end 
 
   get '/names' do 
     names = params[:names]
@@ -24,7 +24,7 @@ class Application < Sinatra::Base
   end 
 
   post '/sort-names' do 
-
+git ad
     names = params[:names]
     split_names = names.split(",")
     sorted_names = split_names.sort.join(",")
@@ -41,13 +41,4 @@ end
 
 
 
-  # get '/hello' do 
-  #   name = params[:name]
-  #   return "Hello #{name}"
-  # end 
-
-  # post '/submit' do 
-  #   name = params[:name]
-  #   message = params[:message]
-  #   return "Thanks #{name}, you sent this message: #{message}"
-  # end 
+  

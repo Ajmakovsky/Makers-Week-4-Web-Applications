@@ -41,27 +41,10 @@ describe Application do
       expect(response.body).to eq "Abi,Greg,Larry,Maisie,Ollie"
     end 
   end
+  context "Get /hello" do 
+    it "tests the /hello path" do 
+      response = get('/hello')
+      expect(response.body).to include '<h1>Hello!</h1>'
+    end
+  end
 end
-
-# # Request:
-
-# POST /sort-names?names"Joe,Alice,Zoe,Julia,Kieran"
-
-# # Expected response:
-
-# Response for 200 OK
-
-# "Alice,Joe,Julia,Kieran,Zoe"
-
-
-# # Request:
-
-# POST /sort-names?names"Greg,Abi,Ollie,Maisie,Larry"
-
-# # Expected response:
-
-# Response for 200 OK 
-
-# "Abi,Greg,Larry,Maisie,Ollie"
-
- 
